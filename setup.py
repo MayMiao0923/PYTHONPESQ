@@ -31,15 +31,3 @@ setup(name='pypesq',
     install_requires=['numpy'],
     python_requires='!=3.0.*, !=3.1.*, !=3.2.*, <4',
 )
-
-
-from distutils.core import setup, Extension
-from Cython.Build import cythonize
-import numpy
-setup(
-ext_modules=[
-Extension("my_module", ["my_module.c"],
-include_dirs=[numpy.get_include()]),
-],
-)
-
